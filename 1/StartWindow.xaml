@@ -1,0 +1,40 @@
+﻿<Window x:Class="_1.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Выберите тему" Width="700" Height="500" MinWidth="300" MinHeight="200" Icon="/free-icon-hang-7733740.png" >
+    <Viewbox>
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Заголовок -->
+            <TextBlock Text="Выберите тему" HorizontalAlignment="Center" Margin="0,10" Foreground="Black" />
+
+            <!-- Выбор темы -->
+            <ComboBox x:Name="ThemeComboBox" HorizontalAlignment="Center" Grid.Row="1" Width="156" Margin="0,20,0,10" Foreground="Black">
+                <ComboBoxItem IsSelected="True">Фрукты</ComboBoxItem>
+                <ComboBoxItem>Животные</ComboBoxItem>
+                <ComboBoxItem>Страны</ComboBoxItem>
+                <ComboBoxItem>Цвета</ComboBoxItem>
+                <ComboBoxItem>Профессии</ComboBoxItem>
+                <ComboBoxItem>Транспорт</ComboBoxItem>
+                <ComboBoxItem>Планеты</ComboBoxItem>
+                <ComboBoxItem>Фильмы</ComboBoxItem>
+                <ComboBoxItem>Еда</ComboBoxItem>
+                <ComboBoxItem>Растения</ComboBoxItem>
+            </ComboBox>
+
+            <!-- Кнопки -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="2">
+                <Button Content="Выход" Click="ExitButton_Click" Width="80" Margin="10,10,10,10"/>
+                <Button Content="Старт" Click="StartButton_Click" Width="80" Margin="10,10,10,10"/>
+            </StackPanel>
+        </Grid>
+    </Viewbox>
+</Window>
